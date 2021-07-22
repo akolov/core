@@ -58,7 +58,7 @@ export function loadScript(id: string, config: LoadScriptOptions): void {
     ...(config.queryParams ?? {})
   });
   script.src = `https://www.googletagmanager.com/gtm.js?${queryString}`;
-  doc.body.appendChild(script);
+  doc.head.appendChild(script);
 }
 
 /**
